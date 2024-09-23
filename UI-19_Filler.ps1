@@ -1,5 +1,2 @@
-python.exe -m pip install --upgrade pip
-pip install pymupdf
-pip install frontend
-pip install spire.doc
-pip install spire.pdf
+cd C:\Users\Prestige\OneDrive - Prestige Payrolls\Desktop\UI19Filler
+python main.py

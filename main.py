@@ -9,10 +9,12 @@ from tkinter import messagebox
 from tkinter import filedialog as fd
 import csv
 
-ORIGINAL_NEW_UI19="documents\\New_UI-19.docx"
-ORIGINAL_OLD_UI19="documents\\UI-19.docx"
-ORIGINAL_UI_28="documents\\UI-2.8.docx"
-ORIGINAL_SALARY_SCHED="documents\\salary_schedule_signed.pdf"
+ORIGINAL_NEW_UI19="C:\\Users\\Prestige\\OneDrive - Prestige Payrolls\Desktop\\UI19Filler\\documents\\New_UI-19.docx"
+ORIGINAL_OLD_UI19="C:\\Users\\Prestige\\OneDrive - Prestige Payrolls\Desktop\\UI19Filler\\documents\\UI-19.docx"
+ORIGINAL_UI_28="C:\\Users\\Prestige\\OneDrive - Prestige Payrolls\Desktop\\UI19Filler\\documents\\UI-2.8.docx"
+ORIGINAL_SALARY_SCHED="C:\\Users\Prestige\\OneDrive - Prestige Payrolls\\Desktop\UI19Filler\\documents\\salary_schedule_signed.pdf"
+
+NEW_PATH="C:\\Users\\Prestige\\OneDrive - Prestige Payrolls\\Desktop\\Generated_UI-19s"
 
 def replaceID(id_num, document):
     id = list(str(id_num))
@@ -230,7 +232,7 @@ def generateNewUI19(date, company, firstname, surname, id, commence, term, uif_n
     document.Replace("<<date>>", date, True, True)
     document.Replace("<<clock>>", clock_num, True, True)
     # Save the resulting document
-    new_name = "C:\\Users\\FLDCLA001\\Desktop\\UI-19s\\"+company+"_"+surname+"_newUI19"
+    new_name = NEW_PATH+company+"_"+surname+"_newUI19"
     document.SaveToFile(new_name+".pdf")
     document.Close()
 
@@ -272,7 +274,7 @@ def generateOldUI19(date, company, firstname, surname, id, commence, term, uif_n
     document.Replace("<<hrs>>", hrs, True, True)
 
     # Save the resulting document
-    new_name = "C:\\Users\\FLDCLA001\\Desktop\\UI-19s\\" + company + "_" + surname + "_oldUI19"
+    new_name = NEW_PATH + company + "_" + surname + "_oldUI19"
     document.SaveToFile(new_name + ".pdf")
     document.Close()
 
@@ -287,7 +289,7 @@ def generateUI28(id,firstname,surname,company):
     name = str(firstname).upper()+ " " + str(surname).upper()
     document.Replace("<<name>>",name,True,True)
     # Save the resulting document
-    new_name = "C:\\Users\\FLDCLA001\\Desktop\\UI-19s\\" + company + "_" + surname + "_UI28"
+    new_name = NEW_PATH + company + "_" + surname + "_UI28"
     document.SaveToFile(new_name + ".pdf")
     document.Close()
     removeWatermarks(new_name)
@@ -326,7 +328,7 @@ def generateSalarySched(id, firstname, surname, uif, company, commence, term, re
         replacer.ReplaceAllText("<<<date>>>", str(date.today()))
 
     # Save the resulting document
-    new_name = "C:\\Users\\FLDCLA001\\Desktop\\UI-19s\\" + company + "_" + surname + "_salarySchedule"
+    new_name = NEW_PATH + company + "_" + surname + "_salarySchedule"
     doc.SaveToFile(new_name + ".pdf")
     doc.Close()
     removePDFWatermarks(new_name)
