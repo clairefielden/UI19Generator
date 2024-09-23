@@ -60,7 +60,7 @@ If you get an error, install [Python](https://www.python.org/downloads/)
 
 Navigate to ```UI-19_Filler.ps```
 Right-click on the script and selct "Open with notepad"
-Change _<directory of installation>_ to the *fully-qualified* path of your UI-19 Filler installation
+Change _directory of installation_ to the *fully-qualified* path of your UI-19 Filler installation
 
 ## How To Run
 
