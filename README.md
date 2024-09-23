@@ -69,7 +69,7 @@ Change _directory of installation_ to the *fully-qualified* path of your UI-19 F
 * Select "Run with Powershell"
 
 > **Note**
-> If you're using **Powershell** for Windows, you can open the terminal as follows:
+> If you're using **Powershell** for Windows, you can open the **ADMINISTRATOR** terminal as follows:
 
 ![Screenshot (6)](https://github.com/user-attachments/assets/678a5084-bde6-4617-a5ae-dde80beb413a)
 
