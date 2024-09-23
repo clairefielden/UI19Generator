@@ -9,12 +9,12 @@ from tkinter import messagebox
 from tkinter import filedialog as fd
 import csv
 
-ORIGINAL_NEW_UI19="C:\\Users\\Prestige\\OneDrive - Prestige Payrolls\Desktop\\UI19Filler\\documents\\New_UI-19.docx"
-ORIGINAL_OLD_UI19="C:\\Users\\Prestige\\OneDrive - Prestige Payrolls\Desktop\\UI19Filler\\documents\\UI-19.docx"
-ORIGINAL_UI_28="C:\\Users\\Prestige\\OneDrive - Prestige Payrolls\Desktop\\UI19Filler\\documents\\UI-2.8.docx"
-ORIGINAL_SALARY_SCHED="C:\\Users\Prestige\\OneDrive - Prestige Payrolls\\Desktop\UI19Filler\\documents\\salary_schedule_signed.pdf"
+ORIGINAL_NEW_UI19="documents\\New_UI-19.docx"
+ORIGINAL_OLD_UI19="documents\\UI-19.docx"
+ORIGINAL_UI_28="documents\\UI-2.8.docx"
+ORIGINAL_SALARY_SCHED="documents\\salary_schedule_signed.pdf"
 
-NEW_PATH="C:\\Users\\Prestige\\OneDrive - Prestige Payrolls\\Desktop\\Generated_UI-19s"
+NEW_PATH="C:\\Users\\Lesley\\Desktop\\Generated_UI19s\\"
 
 def replaceID(id_num, document):
     id = list(str(id_num))
@@ -181,7 +181,7 @@ def enter_data():
                     generateUI19s(hrs,company_name, firstname, lastname, id, start_date, end_date, uif, paye, cipc, reason, address, clock_num, remuneration)
 
 def checkCompany (uifNo):
-    csv_file_path = 'C:\\Users\\FLDCLA001\\PycharmProjects\\UI19Filler\\database\\companies.csv'
+    csv_file_path = 'database\\companies.csv'
     with open(csv_file_path, 'r') as file:
         csv_reader = csv.reader(file, delimiter='|')
         company_info = []
@@ -191,7 +191,7 @@ def checkCompany (uifNo):
     return company_info[0]
 
 def addCompany(uif, paye, cipc, address, name):
-    csv_file_path = 'C:\\Users\\FLDCLA001\\PycharmProjects\\UI19Filler\\database\\companies.csv'
+    csv_file_path = 'database\\companies.csv'
     new_company_info = name + "|" + uif + "|" + paye + "|" + cipc + "|" + address
 
     # read from file
