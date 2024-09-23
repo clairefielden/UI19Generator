@@ -56,11 +56,29 @@ ORIGINAL_SALARY_SCHED
 NEW_PATH
 ```
 Run the ```UI-19_Filler_Install.ps1``` script by right-clicking on it and selecting "Run with Powershell" \
-If you get an error, install [Python](https://www.python.org/downloads/) 
+If you get an error, install **Python**:
+1. Open CMD _as administrator_
+2. Download and install chocolatey:
+```@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"```
+4. Download Python:
+```choco install -y python3```
+5. Verify installation:
+```python --version```
 
 Navigate to ```UI-19_Filler.ps```
 Right-click on the script and selct "Open with notepad"
 Change _directory of installation_ to the *fully-qualified* path of your UI-19 Filler installation
+
+
+> **Note**
+> If you're using **Powershell** for Windows, open the **ADMINISTRATOR** terminal:
+
+```powershell
+> cd C:\UI19Filler
+> Set-ExecutionPolicy Unrestricted
+> Set-ExecutionPolicy RemoteSigned
+
+
 
 ## How To Run
 
