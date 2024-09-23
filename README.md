@@ -1,4 +1,3 @@
-# UI19Generator
 
 <h1 align="center">
   <br>
