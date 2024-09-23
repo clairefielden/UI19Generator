@@ -75,15 +75,15 @@ Change _directory of installation_ to the *fully-qualified* path of your UI-19 F
 
 ```powershell
 > cd C:\UI19Filler
-> Set-ExecutionPolicy Unrestricted
 > Set-ExecutionPolicy RemoteSigned
+> Set-ExecutionPolicy Unrestricted
 
 
 
 ## How To Run
 
-* Navigate to the folder ```UI19Filler``` on your desktop
-* Right-click on the script ```UI-19_Filler.ps1```
+* Navigate to the folder ``` UI19Filler ``` on your desktop
+* Right-click on the script ``` UI-19_Filler.ps1 ```
 * Select "Run with Powershell"
 
 > **Note**
