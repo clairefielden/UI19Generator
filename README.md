@@ -70,6 +70,10 @@ Change _directory of installation_ to the *fully-qualified* path of your UI-19 F
 
 > **Note**
 > If you're using **Powershell** for Windows, you can open the terminal as follows:
+
+![Screenshot (6)](https://github.com/user-attachments/assets/678a5084-bde6-4617-a5ae-dde80beb413a)
+
+
 > Enter the following commands in the terminal:
 ```powershell
 > cd cd c:\Users\FLDCLA001\Desktop\2024\UI19Filler
